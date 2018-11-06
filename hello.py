@@ -29,7 +29,11 @@ def about():
   ''' return about info '''
   return 'about'
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
   ''' return path to the subpath url '''
   return url_for('show_subpath', subpath='test')
+
+@app.route('/static')
+def get_static():
+  return url_for('static', filename='style.css')

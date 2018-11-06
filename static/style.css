@@ -1,0 +1,22 @@
+html, body {
+  margin: 0
+}
+.container {
+  display: block;
+  width: 100%;
+  height: 500px;
+  background: red;
+  color: #fff;
+  position: relative;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -12.5px;
+  left: 50px;
+  background: red;
+  transform: rotate(45deg);
+}
