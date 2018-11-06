@@ -15,6 +15,7 @@ def create_app():
 
   @app.route('/')
   def hello_world():
+    ''' test method '''
     return 'test'
 
   return app
