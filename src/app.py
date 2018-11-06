@@ -13,4 +13,8 @@ def create_app():
 
   app = Flask(__name__.split('.')[0])
 
+  @app.route('/')
+  def hello_world():
+    return 'test'
+
   return app
