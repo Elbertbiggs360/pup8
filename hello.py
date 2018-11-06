@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, url_for
 app = Flask(__name__)
 
 @app.route('/')
@@ -28,3 +28,8 @@ def fetch_projects():
 def about():
   ''' return about info '''
   return 'about'
+
+@app.route('/login')
+def login():
+  ''' return path to the subpath url '''
+  return url_for('show_subpath', subpath='test')
